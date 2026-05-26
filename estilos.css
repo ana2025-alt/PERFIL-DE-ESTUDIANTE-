@@ -150,12 +150,12 @@ ul { list-style: none; }
 }
 
 .hero-avatar-img {
-    width: 200px; /* O el tamaño que tengas definido */
+    width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit: cover; /* ¡Este es el secreto! */
-    object-position: center; /* Esto centra la foto para que se vea el rostro */ 
-}
+    object-fit: cover;
+    object-position: 50% 20%; /* El primer número es horizontal, el segundo es vertical */
+} 
 
 .hero-nombre { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
 .hero-carrera { font-size: 1.2rem; color: var(--acento); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em; }

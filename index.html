@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Anselmi | Programación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio" class="logo">Ana<span>Anselmi</span></a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-enlace">Inicio</a></li>
+                <li><a href="#habilidades" class="nav-enlace">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-enlace">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-enlace">Contacto</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <span class="barra"></span>
+                <span class="barra"></span>
+                <span class="barra"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor hero" id="inicio">
+            <div class="hero-avatar">👩‍💻</div>
+            <h1 class="hero-nombre">Ana Anselmi</h1>
+            <h2 class="hero-carrera">Carrera de Programación</h2>
+            <p class="hero-bio">
+                Estudiante de programación enfocada en la lógica de software, estructuración de bases de datos relacionales y soluciones modulares limpias. Apasionada por transformar ideas en código eficiente y funcional.
+            </p>
+        </section>
+
+        <section class="contenedor" id="habilidades">
+            <h2 class="titulo-seccion">Mis Habilidades</h2>
+            <div class="skills-contenedor">
+                
+                <div class="skills-columna">
+                    <h3>Tecnologías y Fundamentos</h3>
+                    <div class="skills-lista">
+                        <span class="skill-tag">Python (Lógica de programación)</span>
+                        <span class="skill-tag">Java (POO Básica)</span>
+                        <span class="skill-tag">HTML5 / CSS3 (Diseño Web)</span>
+                        <span class="skill-tag">Git / GitHub (Control de Versiones)</span>
+                    </div>
+                </div>
+
+                <div class="skills-columna">
+                    <h3>Habilidades Blandas</h3>
+                    <div class="skills-lista">
+                        <span class="skill-tag">Lógica de Programación</span>
+                        <span class="skill-tag">Resolución de Problemas</span>
+                        <span class="skill-tag">Capacidad de Aprendizaje Rápido</span>
+                        <span class="skill-tag">Atención al Detalle</span>
+                        <span class="skill-tag">Constancia</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contenedor" id="proyectos">
+            <h2 class="titulo-seccion">Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+                
+                <article class="proyecto-tarjeta">
+                    <div class="proyecto-img-placeholder">🌱</div>
+                    <div class="proyecto-info">
+                        <h3 class="proyecto-titulo">sistema-de-riego</h3>
+                        <p class="proyecto-desc">Aplicación lógica estructurada en Python para el control automatizado de sensores de humedad con un enfoque modular.</p>
+                        <div class="proyecto-techs">
+                            <span class="proyecto-tech-tag">Python</span>
+                            <span class="proyecto-tech-tag">OOP</span>
+                            <span class="proyecto-tech-tag">Logic</span>
+                        </div>
+                        <a href="https://github.com/ana2025-alt/sistema-de-riego" class="proyecto-link" target="_blank" rel="noopener">Ver Código</a>
+                    </div>
+                </article>
+
+                <article class="proyecto-tarjeta">
+                    <div class="proyecto-img-placeholder">📚</div>
+                    <div class="proyecto-info">
+                        <h3 class="proyecto-titulo">BIBLIOTECA_CUAM</h3>
+                        <p class="proyecto-desc">Sistema desarrollado para la gestión, registro y control de libros, usuarios y préstamos de una biblioteca académica.</p>
+                        <div class="proyecto-techs">
+                            <span class="proyecto-tech-tag">Software</span>
+                            <span class="proyecto-tech-tag">Bases de Datos</span>
+                            <span class="proyecto-tech-tag">Estructura</span>
+                        </div>
+                        <a href="https://github.com/ana2025-alt/BIBLIOTECA_CUAM" class="proyecto-link" target="_blank" rel="noopener">Ver Código</a>
+                    </div>
+                </article>
+
+                <article class="proyecto-tarjeta">
+                    <div class="proyecto-img-placeholder">🌿</div>
+                    <div class="proyecto-info">
+                        <h3 class="proyecto-titulo">herbarium-digital</h3>
+                        <p class="proyecto-desc">Plataforma digital interactiva diseñada para la catalogación, búsqueda y estudio de diversas especies vegetales y plantas.</p>
+                        <div class="proyecto-techs">
+                            <span class="proyecto-tech-tag">Frontend</span>
+                            <span class="proyecto-tech-tag">Web App</span>
+                            <span class="proyecto-tech-tag">Catalog</span>
+                        </div>
+                        <a href="https://github.com/ana2025-alt/herbarium-digital" class="proyecto-link" target="_blank" rel="noopener">Ver Código</a>
+                    </div>
+                </article>
+
+                <article class="proyecto-tarjeta">
+                    <div class="proyecto-img-placeholder">🏆</div>
+                    <div class="proyecto-info">
+                        <h3 class="proyecto-titulo">tienda-coleccion-copa</h3>
+                        <p class="proyecto-desc">Diseño conceptual e interfaz de una tienda virtual dedicada a la exhibición y gestión de artículos de colección de copas.</p>
+                        <div class="proyecto-techs">
+                            <span class="proyecto-tech-tag">HTML5</span>
+                            <span class="proyecto-tech-tag">CSS3</span>
+                            <span class="proyecto-tech-tag">E-Commerce</span>
+                        </div>
+                        <a href="https://github.com/ana2025-alt/tienda-coleccion-copa" class="proyecto-link" target="_blank" rel="noopener">Ver Código</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="contenedor contacto" id="contacto">
+            <h2 class="titulo-seccion">¿Hacemos equipo?</h2>
+            <div class="contacto-caja">
+                <p class="contacto-texto">Actualmente estoy desarrollando proyectos y expandiendo mis conocimientos en programación. Si deseas colaborar o conocer más de mi trabajo, ¡escríbeme!</p>
+                <div class="contacto-botones">
+                    <a href="mailto:tu.correo@email.com" class="btn-contacto btn-principal">Enviar Correo</a>
+                    <a href="https://github.com/ana2025-alt" class="btn-contacto btn-secundario" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <p class="footer-texto">&copy; 2026 Ana Anselmi. Desarrollado con código limpio y minimalista.</p>
+            <div class="footer-redes">
+                <a href="#inicio">Inicio</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

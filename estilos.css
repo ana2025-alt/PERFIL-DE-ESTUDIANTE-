@@ -1,14 +1,14 @@
 /* ==========================================================================
-   VARIABLES Y CONFIGURACIÓN BASE (Modo Oscuro por Defecto)
+   VARIABLES Y CONFIGURACIÓN BASE (Modo Oscuro)
    ========================================================================== */
 :root {
-    --bg-principal: #0f172a;       /* Slate 900 */
-    --bg-secundario: #1e293b;     /* Slate 800 */
-    --bg-tarjeta: #334155;        /* Slate 700 */
-    --texto-principal: #f8fafc;   /* Slate 50 */
-    --texto-secundario: #94a3b8;  /* Slate 400 */
-    --acento: #38bdf8;            /* Sky 400 (Azul tecnológico) */
-    --acento-hover: #0ea5e9;      /* Sky 500 */
+    --bg-principal: #0f172a;       
+    --bg-secundario: #1e293b;     
+    --bg-tarjeta: #334155;        
+    --texto-principal: #f8fafc;   
+    --texto-secundario: #94a3b8;  
+    --acento: #38bdf8;            
+    --acento-hover: #0ea5e9;      
     --fuente: 'Inter', sans-serif;
     --max-ancho: 1100px;
     --borde-radio: 12px;
@@ -27,7 +27,7 @@ body {
     color: var(--texto-principal);
     font-family: var(--fuente);
     line-height: 1.6;
-    padding-top: 70px; /* Espacio para el navbar fijo */
+    padding-top: 70px; 
 }
 
 a {
@@ -36,15 +36,7 @@ a {
     transition: var(--transicion);
 }
 
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+ul { list-style: none; }
 
 /* Componente de Contenedor Global */
 .contenedor {
@@ -54,7 +46,6 @@ img {
     padding: 4rem 0;
 }
 
-/* Títulos de las Secciones */
 .titulo-seccion {
     font-size: 2rem;
     font-weight: 700;
@@ -74,7 +65,7 @@ img {
 }
 
 /* ==========================================================================
-   1. HEADER / NAVBAR
+   1. NAVBAR
    ========================================================================== */
 .header {
     background-color: rgba(15, 23, 42, 0.85);
@@ -102,14 +93,10 @@ img {
 .logo {
     font-weight: 700;
     font-size: 1.2rem;
-    color: var(--texto-principal);
 }
 
-.logo span {
-    color: var(--acento);
-}
+.logo span { color: var(--acento); }
 
-/* Menú navegación (Mobile First) */
 .nav-menu {
     position: fixed;
     top: 70px;
@@ -125,20 +112,10 @@ img {
     display: flex;
 }
 
-.nav-menu.activo {
-    left: 0;
-}
+.nav-menu.activo { left: 0; }
+.nav-enlace { font-size: 1.2rem; font-weight: 500; }
+.nav-enlace:hover { color: var(--acento); }
 
-.nav-enlace {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.nav-enlace:hover {
-    color: var(--acento);
-}
-
-/* Botón de Menú Móvil (Hamburguesa) */
 .menu-toggle {
     display: block;
     cursor: pointer;
@@ -155,13 +132,12 @@ img {
     transition: var(--transicion);
 }
 
-/* Animación del menú hamburguesa */
 .menu-toggle.activo .barra:nth-child(2) { opacity: 0; }
 .menu-toggle.activo .barra:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .menu-toggle.activo .barra:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
 /* ==========================================================================
-   2. HERO SECTION
+   2. HERO SECTION (Modificado para la imagen real)
    ========================================================================== */
 .hero {
     display: flex;
@@ -173,315 +149,80 @@ img {
     padding: 2rem 0;
 }
 
-.hero-avatar {
-    width: 150px;
-    height: 150px;
+.hero-avatar-img {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--bg-tarjeta), var(--acento));
+    object-fit: cover; /* Recorta la imagen proporcionalmente */
     margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3.5rem;
-    border: 4px solid var(--bg-secundario);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    border: 4px solid var(--acento);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
-.hero-nombre {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.025em;
-}
-
-.hero-carrera {
-    font-size: 1.2rem;
-    color: var(--acento);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.hero-bio {
-    max-width: 600px;
-    color: var(--texto-secundario);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
+.hero-nombre { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+.hero-carrera { font-size: 1.2rem; color: var(--acento); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+.hero-bio { max-width: 600px; color: var(--texto-secundario); font-size: 1.1rem; margin-bottom: 2rem; }
 
 /* ==========================================================================
-   3. LISTA DE HABILIDADES (SKILLS)
+   3. SKILLS & PROYECTOS
    ========================================================================== */
-.skills-contenedor {
-    display: grid;
-    gap: 2rem;
-}
-
-.skills-columna {
-    background-color: var(--bg-secundario);
-    padding: 2rem;
-    border-radius: var(--borde-radio);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.skills-columna h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: var(--texto-principal);
-    border-bottom: 1px solid var(--bg-tarjeta);
-    padding-bottom: 0.5rem;
-}
-
-.skills-lista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
+.skills-contenedor { display: grid; gap: 2rem; }
+.skills-columna { background-color: var(--bg-secundario); padding: 2rem; border-radius: var(--borde-radio); }
+.skills-columna h3 { font-size: 1.3rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--bg-tarjeta); padding-bottom: 0.5rem; }
+.skills-lista { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 .skill-tag {
     background-color: var(--bg-tarjeta);
-    color: var(--texto-principal);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transicion);
 }
+.skill-tag:hover { background-color: var(--acento); color: var(--bg-principal); transform: translateY(-2px); }
 
-.skill-tag:hover {
-    background-color: var(--acento);
-    color: var(--bg-principal);
-    transform: translateY(-2px);
-}
+.proyectos-grid { display: grid; gap: 2rem; }
+.proyecto-tarjeta { background-color: var(--bg-secundario); border-radius: var(--borde-radio); overflow: hidden; display: flex; flex-direction: column; transition: var(--transicion); }
+.proyecto-tarjeta:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); }
+
+.proyecto-img-placeholder { width: 100%; height: 140px; background: linear-gradient(135deg, #1e293b, #334155); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.proyecto-info { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+.proyecto-titulo { font-size: 1.25rem; margin-bottom: 0.75rem; }
+.proyecto-desc { color: var(--texto-secundario); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+.proyecto-techs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.proyecto-tech-tag { font-size: 0.8rem; color: var(--acento); background-color: rgba(56, 189, 248, 0.1); padding: 0.25rem 0.6rem; border-radius: 4px; }
+
+.proyecto-link { text-align: center; background-color: var(--bg-tarjeta); padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+.proyecto-link:hover { background-color: var(--acento); color: var(--bg-principal); }
 
 /* ==========================================================================
-   4. SECCIÓN DE PROYECTOS
+   4. CONTACTO Y FOOTER
    ========================================================================== */
-.proyectos-grid {
-    display: grid;
-    gap: 2rem;
-}
+.contacto-caja { background-color: var(--bg-secundario); padding: 3rem 2rem; border-radius: var(--borde-radio); max-width: 700px; margin: 0 auto; }
+.contacto-texto { color: var(--texto-secundario); margin-bottom: 2rem; }
+.contacto-botones { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
 
-.proyecto-tarjeta {
-    background-color: var(--bg-secundario);
-    border-radius: var(--borde-radio);
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    display: flex;
-    flex-direction: column;
-    transition: var(--transicion);
-}
+.btn-contacto { padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+.btn-principal { background-color: var(--acento); color: var(--bg-principal); }
+.btn-principal:hover { background-color: var(--acento-hover); }
+.btn-secundario { background-color: var(--bg-tarjeta); }
 
-.proyecto-tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-}
-
-.proyecto-img-placeholder {
-    width: 100%;
-    height: 180px;
-    background: linear-gradient(135deg, #1e293b, #334155);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--texto-secundario);
-    font-size: 2.5rem;
-}
-
-.proyecto-info {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.proyecto-titulo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.proyecto-desc {
-    color: var(--texto-secundario);
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.proyecto-techs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.proyecto-tech-tag {
-    font-size: 0.8rem;
-    color: var(--acento);
-    background-color: rgba(56, 189, 248, 0.1);
-    padding: 0.25rem 0.6rem;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-.proyecto-link {
-    display: inline-block;
-    text-align: center;
-    background-color: var(--bg-tarjeta);
-    color: var(--texto-principal);
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.proyecto-link:hover {
-    background-color: var(--acento);
-    color: var(--bg-principal);
-}
+.footer { background-color: var(--bg-secundario); padding: 2rem 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); }
 
 /* ==========================================================================
-   5. SECCIÓN DE CONTACTO
-   ========================================================================== */
-.contacto {
-    text-align: center;
-}
-
-.contacto-caja {
-    background-color: var(--bg-secundario);
-    padding: 3rem 2rem;
-    border-radius: var(--borde-radio);
-    max-width: 700px;
-    margin: 0 auto;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.contacto-texto {
-    color: var(--texto-secundario);
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-}
-
-.contacto-botones {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn-contacto {
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.btn-principal {
-    background-color: var(--acento);
-    color: var(--bg-principal);
-}
-
-.btn-principal:hover {
-    background-color: var(--acento-hover);
-}
-
-.btn-secundario {
-    background-color: var(--bg-tarjeta);
-    color: var(--texto-principal);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.btn-secundario:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* ==========================================================================
-   6. FOOTER
-   ========================================================================== */
-.footer {
-    background-color: var(--bg-secundario);
-    padding: 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: center;
-}
-
-.footer-contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer-texto {
-    color: var(--texto-secundario);
-    font-size: 0.9rem;
-}
-
-.footer-redes {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    color: var(--texto-secundario);
-}
-
-.footer-redes a:hover {
-    color: var(--acento);
-}
-
-/* ==========================================================================
-   MEDIA QUERIES (Diseño Responsivo Escalable)
+   MEDIA QUERIES (Responsivo)
    ========================================================================== */
 @media screen and (min-width: 768px) {
-    body {
-        padding-top: 80px;
-    }
-
-    .header {
-        height: 80px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .nav-menu {
-        position: static;
-        height: auto;
-        width: auto;
-        flex-direction: row;
-        background-color: transparent;
-        gap: 2rem;
-    }
-
-    .nav-enlace {
-        font-size: 1rem;
-    }
-
-    .hero-nombre {
-        font-size: 3.5rem;
-    }
-
-    .skills-contenedor {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .proyectos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contacto-botones {
-        flex-direction: row;
-    }
+    body { padding-top: 80px; }
+    .header { height: 80px; }
+    .menu-toggle { display: none; }
+    .nav-menu { position: static; height: auto; width: auto; flex-direction: row; background-color: transparent; gap: 2rem; }
+    .nav-enlace { font-size: 1rem; }
+    .hero-nombre { font-size: 3.5rem; }
+    .skills-contenedor { grid-template-columns: 1fr 1fr; }
+    .proyectos-grid { grid-template-columns: repeat(2, 1fr); }
+    .contacto-botones { flex-direction: row; }
 }
 
 @media screen and (min-width: 1024px) {
-    .proyectos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+    .proyectos-grid { grid-template-columns: repeat(2, 1fr); } /* Mantiene una bonita grilla de 2x2 */
+} 

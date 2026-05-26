@@ -150,13 +150,11 @@ ul { list-style: none; }
 }
 
 .hero-avatar-img {
-    width: 160px;
-    height: 160px;
+    width: 200px; /* O el tamaño que tengas definido */
+    height: 200px;
     border-radius: 50%;
-    object-fit: cover; /* Recorta la imagen proporcionalmente */
-    margin-bottom: 1.5rem;
-    border: 4px solid var(--acento);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    object-fit: cover; /* ¡Este es el secreto! */
+    object-position: center; /* Esto centra la foto para que se vea el rostro */ 
 }
 
 .hero-nombre { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
